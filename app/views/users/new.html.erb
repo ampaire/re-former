@@ -1,12 +1,29 @@
 <h1>Sign Up</h1>
 
-<form accept-charset="UTF-8" action="/users" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <label>Username</label>
-  <input name="user[name]" type="text" placeholder="Username" />
-  <label>Email</label>
-  <input name="user[email]" type="text" placeholder="Email" />
-  <label>Password</label>
-  <input name="user[password]" type="password" placeholder="Pasword"/>
-  <input name="submit" type="submit" value="Process">
-</form>
+<%# <form accept-charset="UTF-8" action="/users" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>
+  <%# <label>Username</label> %>
+  <%# <input name="user[name]" type="text" placeholder="Username" /> %>
+  <%# <label>Email</label> %>
+  <%# <input name="user[email]" type="text" placeholder="Email" /> %>
+  <%# <label>Password</label> %>
+  <%# <input name="user[password]" type="password" placeholder="Pasword"/> %>
+  <%# <input name="submit" type="submit" value="Process"> %>
+<%# </form> %> 
+
+<%= form_for User.new do |f| %>     
+  <%= f.label :username %>
+  <%= f.text_field :name, placeholder: 'Your username' %>
+
+  <br>
+
+  <%= f.label :email %>
+  <%= f.email_field :email, placeholder: 'Your email'%>
+
+  <br>
+
+  <%= f.label :password %>
+  <%= f.password_field :password, placeholder: 'Password'%>
+  <br>
+  <%= f.submit "Submit" %>
+<% end %>
