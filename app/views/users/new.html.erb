@@ -11,19 +11,35 @@
   <%# <input name="submit" type="submit" value="Process"> %>
 <%# </form> %> 
 
-<%= form_for User.new do |f| %>     
-  <%= f.label :username %>
-  <%= f.text_field :name, placeholder: 'Your username' %>
+<%# <%= form_tag User.new do |f| %>     
+  <%# <%= f.label :username %> 
+  <%# <%= f.text_field :name, placeholder: 'Your username' %>
 
+  <%# <br>
+
+  <%# <%= f.label :email %>
+  <%# <%= f.email_field :email, placeholder: 'Your email'%>
+
+  <%# <br>
+
+  <%# <%= f.label :password %>
+  <%# <%= f.password_field :password, placeholder: 'Password'%>
+  <%# <br>
+  <%# <%= f.submit "Submit" %>
+<%# <% end %>
+
+<%= form_for @user do |f| %>
+  <%= f.label :username %> 
+  <%= f.text_field :name, placeholder: 'John Doe' %>
   <br>
-
+  <br>
   <%= f.label :email %>
-  <%= f.email_field :email, placeholder: 'Your email'%>
-
+  <%= f.email_field :email, placeholder: 'example@example.com' %>
   <br>
-
+  <br>
   <%= f.label :password %>
-  <%= f.password_field :password, placeholder: 'Password'%>
+  <%= f.password_field :password, placeholder: 'Your Password' %>
+  <br>
   <br>
   <%= f.submit "Submit" %>
 <% end %>
