@@ -1,15 +1,3 @@
-<%= form_for @user do |f| %>
-  <%= f.label :username %> 
-  <%= f.text_field :name, placeholder: 'John Doe' %>
-  <br>
-  <br>
-  <%= f.label :email %>
-  <%= f.email_field :email, placeholder: 'example@example.com' %>
-  <br>
-  <br>
-  <%= f.label :password %>
-  <%= f.password_field :password, placeholder: 'Your Password' %>
-  <br>
-  <br>
-  <%= f.submit "Submit" %>
-<% end %>
+<h1>Edit Existing User</h1>
+
+<%= render 'form' %>

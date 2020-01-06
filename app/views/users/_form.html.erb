@@ -1,0 +1,15 @@
+<%= form_for @user do |f| %>
+  <%= f.label :username %> 
+  <%= f.text_field :name, placeholder: 'John Doe' %>
+  <p class='error' style='color: red'><%= show_errors(@user, :name) %></p>
+  <br>
+  <%= f.label :email %>
+  <%= f.email_field :email, placeholder: 'example@example.com' %>
+  <p class='error' style='color: red'><%= show_errors(@user, :email) %></p>
+  <br>
+  <%= f.label :password %>
+  <%= f.password_field :password, placeholder: 'Your Password' %>
+  <p class='error' style='color: red'><%= show_errors(@user, :password) %></p>
+  <br>
+  <%= f.submit "Submit" %>
+<% end %>

@@ -1,4 +1,4 @@
-<h1>Sign Up</h1>
+<h1>Sign Up New</h1>
 
 <%# <form accept-charset="UTF-8" action="/users" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>
@@ -28,18 +28,4 @@
   <%# <%= f.submit "Submit" %>
 <%# <% end %>
 
-<%= form_for @user do |f| %>
-  <%= f.label :username %> 
-  <%= f.text_field :name, placeholder: 'John Doe' %>
-  <br>
-  <br>
-  <%= f.label :email %>
-  <%= f.email_field :email, placeholder: 'example@example.com' %>
-  <br>
-  <br>
-  <%= f.label :password %>
-  <%= f.password_field :password, placeholder: 'Your Password' %>
-  <br>
-  <br>
-  <%= f.submit "Submit" %>
-<% end %>
+<%= render 'form' %>
