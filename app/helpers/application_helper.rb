@@ -1,13 +1,10 @@
 # frozen_string_literal: true
 
 module ApplicationHelper
-  def show_errors(object, field_name)
-    if object.errors.any?
-      if !object.errors.messages[field_name].blank?
-        object.errors.messages[field_name].join(", ")
-      end
+  def errors_for(model, attribute)
+    model.errors[attribute].present?
+    content_tag :span, class: 'error_explanation' do
+      model.errors[attribute].join(', ')
     end
-  end 
+  end
 end
-
-
